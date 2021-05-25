@@ -1,0 +1,8 @@
+googletest
+CMakeCache.txt
+CMakeFiles/
+Makefile
+calculator
+lib/
+test
+cmake_install.cmake

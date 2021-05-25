@@ -1,4 +1,4 @@
-fndef __DIV_HPP__
+#ifndef __DIV_HPP__
 #define __DIV_HPP__
 
 #include "base.hpp"
