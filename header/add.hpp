@@ -11,6 +11,10 @@ using namespace std;
 class Add : public Base {
     public:
         Add (Base* left, Base* right) : Base(), left(left), right(right) { }
+	~Add () {
+		delete left;
+		delete right;
+	}
         virtual double evaluate() {return left->evaluate() + right->evaluate(); }
         virtual std::string stringify()
             {

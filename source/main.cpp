@@ -8,6 +8,7 @@
 #include "../header/mult.hpp"
 #include "../header/div.hpp"
 #include "../header/rand.hpp"
+#include "../header/factory.hpp"
 
 int main(int argc, char** argv) {
 	Factory example;
@@ -19,5 +20,11 @@ int main(int argc, char** argv) {
 	}
 	delete outcome;
 
+/*	stringstream in;
+
+	in << (string)argv[1];
+
+	cout << stod(in.str()) << endl;
+*/
 return 0;
 }
