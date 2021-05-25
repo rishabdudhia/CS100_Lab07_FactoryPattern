@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "../header/factory.hpp"
 #include "../header/base.hpp"
 #include "../header/add.hpp"
 #include "../header/pow.hpp"
