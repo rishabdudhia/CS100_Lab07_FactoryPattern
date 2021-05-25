@@ -9,7 +9,15 @@
 #include "../header/div.hpp"
 #include "../header/rand.hpp"
 
-int main() {
+int main(int argc, char** argv) {
+	Factory example;
+	
+	Base* outcome = example.parse(argv, argc);
+	if(outcome){
+		cout << outcome->stringify() << " = " << outcome->evaluate();
+		cout << endl;	
+	}
+	delete outcome;
 
-	return 0;
+return 0;
 }
