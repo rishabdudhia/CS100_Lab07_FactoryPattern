@@ -94,4 +94,20 @@ TEST(FactoryTest, Mult_two_neg) {
         delete temp;
 }
 
+TEST(FactoryTest, Sub_and_Add_int) {
+        Factory test;
+        char *args[]={"2", "-", "5", "+", "3"};
+        Base* temp = Factory().parse(args, 5);
+        EXPECT_EQ(temp->evaluate(), 0);
+        delete temp;
+}
+
+TEST(FactoryTest, pos_Sub_and_Add_int) {
+        Factory test;
+        char *args[]={"7", "-", "5", "+", "3"};
+        Base* temp = Factory().parse(args, 5);
+        EXPECT_EQ(temp->evaluate(), 5);
+        delete temp;
+}
+
 #endif
