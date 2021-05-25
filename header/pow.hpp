@@ -12,7 +12,11 @@ using namespace std;
 class Pow : public Base {
     public:
         Pow (Base* left, Base* right) : Base(), left(left), right(right) { }
-        virtual double evaluate() {return (pow(left->evaluate(),right->evaluate())); }
+        ~Pow () {
+		delete left;
+		delete right;
+	}
+	virtual double evaluate() {return (pow(left->evaluate(),right->evaluate())); }
         virtual std::string stringify()
             {
                 ostringstream ss;
