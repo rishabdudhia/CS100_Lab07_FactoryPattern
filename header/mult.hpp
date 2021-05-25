@@ -11,7 +11,11 @@
  class Mult : public Base {
     public:
         Mult(Base* lhs, Base* rhs) : left(lhs), right(rhs) { }
-        virtual double evaluate() { 
+        ~Mult () {
+		delete left;
+		delete right;
+	}
+	virtual double evaluate() { 
 		double lhse = left->evaluate();
 		double rhse = right->evaluate();
 	return (rhse*lhse); }

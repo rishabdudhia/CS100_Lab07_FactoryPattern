@@ -11,7 +11,11 @@ using namespace std;
 class Sub : public Base {
     public:
         Sub (Base* left, Base* right) : Base(), left(left), right(right) { }
-        virtual double evaluate() {return left->evaluate() - right->evaluate(); }
+        ~Sub () {
+		delete left;
+		delete right;
+	}
+	virtual double evaluate() {return left->evaluate() - right->evaluate(); }
         virtual std::string stringify()
             {
                 ostringstream ss;
