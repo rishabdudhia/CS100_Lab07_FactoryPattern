@@ -5,7 +5,6 @@
 #include "../header/factory.hpp"
 
 TEST(TestsRdudh001, SimpleDiv) {
-	Factory test;
 	char* args[] = {"./calculator", "6", "/", "3"};
 	Base* op = test.parse(args,4);
 	
@@ -62,10 +61,7 @@ TEST(TestsRdudh001, PowThenSub) {
         EXPECT_DOUBLE_EQ(op->evaluate(), 32.5);
 
         delete op;
-=======
->>>>>>> master
 }
-
 TEST(TestsRdudh001, PowToMult) {
         Factory test;
         char* args[] = {"./calculator", "6", "**", "2", "*", ".25"};
