@@ -8,6 +8,7 @@
 #include "../header/mult.hpp"
 #include "../header/div.hpp"
 #include "../header/rand.hpp"
+#include "../header/factory.hpp"
 
 int main(int argc, char** argv) {
 	Factory example;

@@ -10,9 +10,9 @@ using namespace std;
 
 class Op : public Base {
     public:
-        Op(double value) : Base(), val(value) { }
+        Op(double value) : Base(), val(value) { }	
         virtual double evaluate() { return val; }
-        virtual std::string stringify() 
+	virtual std::string stringify() 
 	    {
 		ostringstream ss;
 		ss << setprecision(8) << noshowpoint << val;

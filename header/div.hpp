@@ -11,7 +11,11 @@
  class Div : public Base {
     public:
         Div(Base* lhs, Base* rhs) : left(lhs), right(rhs) { }
-        virtual double evaluate() { 
+       ~Div () {
+		delete left;
+		delete right;
+	}
+	 virtual double evaluate() { 
 		double lhse = left->evaluate();
 		double rhse = right->evaluate();
 	return (rhse/lhse); }
