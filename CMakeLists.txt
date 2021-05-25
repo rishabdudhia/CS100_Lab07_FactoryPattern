@@ -9,7 +9,7 @@ ADD_EXECUTABLE(test
 	source/factory.cpp
 )
 
-ADD_EXECUTABLE(lab
+ADD_EXECUTABLE(calculator
 	source/main.cpp
 	source/factory.cpp
 )
