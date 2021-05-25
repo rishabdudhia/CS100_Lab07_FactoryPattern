@@ -5,6 +5,7 @@
 #include "../header/factory.hpp"
 
 TEST(TestsRdudh001, SimpleDiv) {
+        Factory test;
 	char* args[] = {"./calculator", "6", "/", "3"};
 	Base* op = test.parse(args,4);
 	
@@ -28,7 +29,7 @@ TEST(TestsRdudh001, DivThenSub) {
         char* args[] = {"./calculator", "6", "/", "3", "-", "-8"};
         Base* op = test.parse(args,6);
 
-        EXPECT_DOUBLE_EQ(op->evaluate(), -10);
+        EXPECT_DOUBLE_EQ(op->evaluate(), 10);
 
         delete op;
 }
