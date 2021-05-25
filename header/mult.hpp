@@ -11,7 +11,7 @@
  class Mult : public Base {
     public:
         Mult(Base* lhs, Base* rhs) : left(lhs), right(rhs) { }
-        ~Mult() {
+        ~Mult () {
 		delete left;
 		delete right;
 	}
