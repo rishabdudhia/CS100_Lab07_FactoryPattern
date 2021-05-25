@@ -11,7 +11,7 @@
 #include "sub.hpp"
 
 #include <stack>
-#include "ctype.h"
+#include <cctype>
 
 using namespace std;
 

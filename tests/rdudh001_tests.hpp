@@ -13,7 +13,7 @@
 
 TEST(TestsRdudh001, OnlyOp) {
 	Factory test;
-	char* args[] = {3};
+	char* args[] = {"3"};
 	Base* op = test.parse(args,1);
 	
 	EXPECT_DOUBLE_EQ(op->evaluate(), 3);
