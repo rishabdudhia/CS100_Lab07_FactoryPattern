@@ -15,4 +15,33 @@ Base* Factory::parse(char** input, int length) {
 			root = new Op(stod(curr));
 		}
 		else if (isdigit(next) && curr == "+") {
-			root = new Add(
+			root = new Add(expressions.top(), new Op(stod(curr)));
+		}
+		else if (isdigit(next) && curr = "-") {
+			root = new Sub(expressions.top(), new Op(stod(curr)));
+		}
+		else if (isdigit(next) && curr = "*") {
+			root = new Mult(expressions.top(), new Op(stod(curr)));
+		}
+		else if (isdigit(next) && curr = "/") {
+			root = new Div(expressions.top(), new Op(stod(curr)));
+		}
+		else if (isdigit(next) && curr == "**") {
+			root = new Pow(expressions.top(), new Op(stod(curr)));
+		}
+		else {
+			cout << "ERROR!" << endl;
+			delete root;
+			return nullptr;
+		}
+
+		expressions.push(root);
+		++i;
+	}
+	
+	int size = expressions.size();
+	for (int j = 0; j < size; ++j) {
+		expressions.pop();
+	}
+	return root;
+}

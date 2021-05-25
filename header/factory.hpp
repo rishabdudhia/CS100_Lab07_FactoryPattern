@@ -17,7 +17,7 @@ using namespace std;
 
 class Factory {
     public:
-	Fact() {}
+	Factory() {}
 	Base* parse (char** input, int length); 
 };
 
