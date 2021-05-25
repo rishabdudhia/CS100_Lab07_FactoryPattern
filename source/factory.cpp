@@ -47,10 +47,6 @@ Base* Factory::parse(char** input, int length) {
 		++i;
 	}
 
-//	int size = expressions.size();
-//	for (int j = 0; j < size; ++j) {
-//		expressions.pop();
-//	}
 	return root;
 }
 

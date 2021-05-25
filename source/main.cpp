@@ -20,11 +20,6 @@ int main(int argc, char** argv) {
 	}
 	delete outcome;
 
-/*	stringstream in;
 
-	in << (string)argv[1];
-
-	cout << stod(in.str()) << endl;
-*/
 return 0;
 }
