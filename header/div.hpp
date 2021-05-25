@@ -14,7 +14,7 @@
         virtual double evaluate() { 
 		double lhse = left->evaluate();
 		double rhse = right->evaluate();
-	return (rhse/lhse); }
+	return (lhse/rhse); }
 
         virtual string stringify() { 
 		string rhss = right->stringify();
